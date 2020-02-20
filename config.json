@@ -12,6 +12,7 @@
     "armv7",
     "i386"
   ],
+  "host_network": true,
   "options": {
     "host": "localhost",
     "port": 1883,
