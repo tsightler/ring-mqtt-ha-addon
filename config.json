@@ -1,0 +1,41 @@
+{
+  "name": "Ring Hass.io Integration",
+  "version": "3.0",
+  "slug": "ring-mqtt",
+  "description": "Ring Device Integration vis MQTT (https://github.com/tsightler/ring-mqtt)",
+  "startup": "before",
+  "boot": "auto",
+  "arch": [
+    "aarch64",
+    "amd64",
+    "armhf",
+    "armv7",
+    "i386"
+  ],
+  "options": {
+    "host": "localhost",
+    "port": 1883,
+    "ring_topic": "ring",
+    "hass_topic": "hass/status",
+    "mqtt_user": "<mqtt_or_ha_user>",
+    "mqtt_pass": "<mqtt_or_ha_password>",
+    "ring_user": "",
+    "ring_pass": "",
+    "ring_token": "",
+	"enable_cameras": false,
+    "location_ids": [""]
+  },
+  "schema": {
+   "host": "str",
+    "port": "port",
+    "ring_topic": "str",
+    "hass_topic": "str",
+    "mqtt_user": "str",
+    "mqtt_pass": "str",
+    "ring_user": "str",
+    "ring_pass": "str",
+    "ring_token": "str",
+	"enable_cameras: "bool",
+    "location_ids": ["str"]  
+  }
+}
