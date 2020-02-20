@@ -35,7 +35,7 @@
     "ring_user": "str",
     "ring_pass": "str",
     "ring_token": "str",
-	"enable_cameras: "bool",
+	"enable_cameras": "bool",
     "location_ids": ["str"]  
   }
 }
