@@ -1,5 +1,5 @@
 {
-  "name": "Ring HassIO via MQTT Add-on",
+  "name": "Ring HassIO Integration Add-on",
   "url": "https://github.com/tsightler/ring-mqtt",
   "maintainer": "tsightler"
 }
