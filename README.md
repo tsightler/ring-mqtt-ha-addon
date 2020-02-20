@@ -17,7 +17,7 @@ To configure this plugin please review the following options:
 | mqtt_pass | Password for MQTT broker (default for Mosquitto addon is to use HA username/password) |
 | ring_user | Ring Username - Should be blank for 2FA |
 | ring_pass | Ring Password - Should be blank for 2FA |
-| ring_token | The refresh token received after authenticating with 2FA -- See https://github.com/dgreif/ring/wiki/Two-Factor-Auth |
+| ring_token | The refresh token received after authenticating with 2FA - See https://github.com/dgreif/ring/wiki/Two-Factor-Auth |
 | enable_cameras | Default false since the native Ring component for Home Assistant supports these, set to true to use camera support in this addon |
 | location_ids | Comma separated list of location Ids to limit devices.  Blank is all locations which the specified account has access to. |
 
