@@ -3,7 +3,7 @@ This addon provides integration of Ring devices into Hass.io using the [ring-mqt
 
 ### Configuration
 
-***This add-on require MQTT.  The Mosquitto plugin for Hass.io is highly recommended.****
+***This add-on requires an MQTT broker.  The Mosquitto plugin for Hass.io is highly recommended.***
 
 To configure this plugin please review the following options:
 
