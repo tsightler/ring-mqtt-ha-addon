@@ -9,4 +9,4 @@ cd ring-mqtt
 npm install
 npm audit fix
 chmod +x ring-mqtt.js
-DEBUG=ring-mqtt HASSASSON=true /ring-mqtt/ring-mqtt.js
+DEBUG=ring-mqtt HASSADDON=true /ring-mqtt/ring-mqtt.js
