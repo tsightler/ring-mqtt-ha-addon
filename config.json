@@ -21,8 +21,6 @@
     "hass_topic": "hass/status",
     "mqtt_user": "<mqtt_or_ha_user>",
     "mqtt_pass": "<mqtt_or_ha_password>",
-    "ring_user": "",
-    "ring_pass": "",
     "ring_token": "",
     "enable_cameras": false,
     "location_ids": [""]
@@ -34,8 +32,6 @@
     "hass_topic": "str",
     "mqtt_user": "str",
     "mqtt_pass": "str",
-    "ring_user": "str",
-    "ring_pass": "str",
     "ring_token": "str",
     "enable_cameras": "bool",
     "location_ids": ["str"]  
