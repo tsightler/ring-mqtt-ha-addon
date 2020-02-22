@@ -11,7 +11,7 @@ To simplify generation of a 2FA refresh token the ring-mqtt script and this addo
 
 No refresh token found, go to http://<ip_address>:55123/
 
-You can go to the URL manually, or simply click the "OPEN WEB UI" button to access a simple form that will prompt for your Ring username/password and then the 2FA code sent via email/text.  Once you enter this code it will present the refresh token and the webserver/addon will stop within 10 seconds.  Simple copy this token and paste it into the ring_token option of the config (yes, it's LONG).  Start the addon again and it will attempt to login with the refresh token.
+You can access this URL manually, or simply click the "OPEN WEB UI" button on the addon page.  This will access a simple form that will accept your Ring username/password and then the 2FA code sent via email/text.  Once you enter these it will present the refresh token and the webserver/addon will stop within 10 seconds.  Simple copy this token and paste it into the ring_token option of the config (yes, it's LONG).  Now start the addon again and it will attempt to login with the refresh token.
 
 For security purposes the webserver runs only if the ring_token option is blank so it's not reachable under normal operation, although the "OPEN WEB UI" option will still be there.  If you need to regenerate the refresh token simply delete the existing token from the config options and restart the script.
 
