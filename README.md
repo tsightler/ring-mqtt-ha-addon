@@ -6,9 +6,9 @@ This addon provides integration of Ring devices into Hass.io using the [ring-mqt
 ### Configuration
 ***Ring now requires 2FA Authenticaion so the username and password options have been removed from this addon.  Please read the instruction below to generate a refresh token***
 
-To simplify generation of a 2FA refresh token I have enhanced the ring-mqtt script and this addon to include a small web server.  To active this server you must leave the "refresh_token" field blank and start the plugin.  After 30 seconds or so you should be able to select the "Open web UI" button to access a simple form that will prompt for your Ring username/password and then the 2FA code sent via email/text.  Once you enter this code it will present the refresh token.  Simple copy this token and paste it into the ring_token option of the config (yes, it's LONG).  Start the addon again and it will attempt to login with the refresh token.
+To simplify generation of a 2FA refresh token I have enhanced the ring-mqtt script and this addon to include a small web server.  To active this server you must leave the "refresh_token" field blank and start the plugin.  After 30 seconds or so you should be able to select the "OPEN WEB UI" button to access a simple form that will prompt for your Ring username/password and then the 2FA code sent via email/text.  Once you enter this code it will present the refresh token.  Simple copy this token and paste it into the ring_token option of the config (yes, it's LONG).  Start the addon again and it will attempt to login with the refresh token.
 
-The webserver does not run if a refresh token is present so if you need to regenerate the refresh token simply delete the existing token from the config options and restart the script.
+For security purposes the webserver runs only if the ring_token option is blank so it's not reachable under normal operation, although the "OPEN WEB UI" option will still be there.  If you need to regenerate the refresh token simply delete the existing token from the config options and restart the script.
 
 To configure this plugin please review the following options:
 
