@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Submit an issue with the plugin
-title: "[BUG] "
+title: "[BUG] Issue Summary"
 labels: bug
 assignees: tsightler
 
