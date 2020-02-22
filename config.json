@@ -13,7 +13,7 @@
     "i386"
   ],
   "host_network": true,
-  "webui": "https://[HOST]:[PORT:55123]",
+  "webui": "http://[HOST]:[PORT:55123]",
   "options": {
     "host": "localhost",
     "port": 1883,
