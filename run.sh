@@ -1,3 +1,4 @@
+#!/bin/bash
 echo Ring Device Integration via MQTT
 echo Node Version
 node -v
