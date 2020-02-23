@@ -5,7 +5,7 @@ This addon provides integration of Ring devices into Hass.io using the [ring-mqt
 
 ### Configuration
 ***Ring now requires two-factor authentication (2FA) so the username and password options have been removed from this addon.***
-***Please read the instruction below to generate a refresh token***
+***Please read the instruction below to generate a refresh token.***
 
 To simplify generation of a 2FA refresh token the ring-mqtt script and this addon have been enhanced to include a small web service.  To activate this service simply leave the "refresh_token" field blank and start the addon and watch the logs for the following message:
 
