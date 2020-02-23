@@ -1,7 +1,7 @@
 # Ring MQTT Hass.io Addon
 This addon provides integration of Ring devices into Hass.io using the [ring-mqtt](https://github.com/tsightler/ring-mqtt) script.  Currently most alarm devices are supported, as well as camera functions.  Camera support is disabled by default since these are supported via native Ring component in Home Assistant, but can be enabled if you prefer to use the support here.
 
-***This add-on requires an MQTT broker.  The Mosquitto plugin for Hass.io is highly recommended.***
+***This add-on requires an MQTT broker.  The Mosquitto plugin for Hass.io is highly recommended, but any MQTT compliant broker should work.***
 
 ### Configuration
 ***Ring now requires two-factor authentication (2FA) so the username and password options have been removed from this addon.***
