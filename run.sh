@@ -19,4 +19,4 @@ npm audit fix
 echo "-------------------------------------------------------"
 echo Running ring-mqtt.js version $(cat package.json | grep version | cut -f4 -d'"')...
 chmod +x ring-mqtt.js
-DEBUG=ring-mqtt HASSADDON=true /ring-mqtt/ring-mqtt.js
+DEBUG=ring-mqtt HASSADDON=true exec /ring-mqtt/ring-mqtt.js
