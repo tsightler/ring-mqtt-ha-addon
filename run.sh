@@ -9,13 +9,14 @@ echo "-------------------------------------------------------"
 echo Node version $(node -v)
 echo NPM version $(npm -v)
 git --version
-echo "-------------------------------------------------------"
 cd ring-mqtt
+echo "-------------------------------------------------------"
 echo "Running \"npm install\" to install dependent packages..."
 npm install
+echo "-------------------------------------------------------"
 echo "Running \"npm audit fix\" to update packages with any vulnerabilities..."
 npm audit fix
-chmod +x ring-mqtt.js
 echo "-------------------------------------------------------"
 echo Running ring-mqtt.js version $(cat package.json | grep version | cut -f4 -d'"')...
+chmod +x ring-mqtt.js
 DEBUG=ring-mqtt HASSADDON=true /ring-mqtt/ring-mqtt.js
