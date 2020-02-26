@@ -1,6 +1,6 @@
 {
   "name": "Ring Hass.io Addon",
-  "version": "3.0.0b4",
+  "version": "3.0.0",
   "slug": "ring-mqtt",
   "description": "Ring Device Integration via MQTT (https://github.com/tsightler/ring-mqtt)",
   "startup": "before",

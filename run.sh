@@ -10,9 +10,6 @@ echo Node version $(node -v)
 echo NPM version $(npm -v)
 git --version
 cd ring-mqtt
-#echo "-------------------------------------------------------"
-#echo "Running \"npm install\" to install dependent packages..."
-#npm install
 echo "-------------------------------------------------------"
 echo "Running \"npm audit fix\" to update packages with any vulnerabilities..."
 npm audit fix
