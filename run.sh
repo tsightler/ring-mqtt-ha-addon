@@ -6,7 +6,7 @@ echo "|                                                     |"
 echo "| Report issues at:                                   |"
 echo "| https://github.com/tsightler/ring-mqtt-hassio-addon |"
 echo "-------------------------------------------------------"
-echo ring-mqtt.js version $(cat package.json | grep version | cut -f4 -d'"')
+echo ring-mqtt.js version $(cat /ring-mqtt/package.json | grep version | cut -f4 -d'"')
 echo Node version $(node -v)
 echo NPM version $(npm -v)
 git --version
