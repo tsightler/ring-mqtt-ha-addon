@@ -1,6 +1,6 @@
 {
   "name": "Ring Hass.io Addon",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "slug": "ring_mqtt",
   "description": "Ring Device Integration via MQTT (https://github.com/tsightler/ring-mqtt)",
   "startup": "before",
@@ -18,9 +18,9 @@
     "host": "localhost",
     "port": 1883,
     "ring_topic": "ring",
-    "hass_topic": "hass/status",
-    "mqtt_user": "<mqtt_or_ha_user>",
-    "mqtt_pass": "<mqtt_or_ha_password>",
+    "hass_topic": "homeassistant/status",
+    "mqtt_user": "<mqtt_or_hassio_user>",
+    "mqtt_pass": "<mqtt_or_hassio_password>",
     "ring_token": "",
     "enable_cameras": false,
     "location_ids": [""]
