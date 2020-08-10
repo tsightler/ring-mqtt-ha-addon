@@ -1,5 +1,5 @@
 {
-  "name": "Ring HassIO Add-on",
-  "url": "https://github.com/tsightler/ring-mqtt-hassio-addon",
+  "name": "Ring Devices via MQTT Add-on",
+  "url": "https://github.com/tsightler/ring-mqtt-ha-addon",
   "maintainer": "tsightler"
 }
