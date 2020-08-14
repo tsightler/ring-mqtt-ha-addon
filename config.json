@@ -1,6 +1,6 @@
 {
   "name": "Ring Devices via MQTT",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "slug": "ring_mqtt",
   "description": "Integrate Ring Alarm, Smart Lighting and other devices via MQTT",
   "startup": "before",
@@ -23,6 +23,7 @@
     "mqtt_pass": "<mqtt_or_hassio_password>",
     "ring_token": "",
     "enable_cameras": false,
+    "enable_modes": false,
     "location_ids": [""]
   },
   "schema": {
@@ -34,6 +35,7 @@
     "mqtt_pass": "str",
     "ring_token": "str",
     "enable_cameras": "bool",
+    "enable_modes": "bool",
     "location_ids": ["str"]  
   }
 }
