@@ -27,5 +27,6 @@ To configure this plugin please review the following options:
 | mqtt_pass | Password for MQTT broker (default for Mosquitto addon is to use HA username/password) |
 | ring_token | A manually configured refresh token. This can remain blank if you use the built in web UI to generate a token or you can follow the instructions at https://github.com/dgreif/ring/wiki/Refresh-Tokens to manually create a token and enter it here |
 | enable_cameras | Default false since the native Ring component for Home Assistant supports these, set to true to use camera support in this addon |
+| enable_modes | Enable support for Location Modes for sites without a Ring Alarm Panel
 | location_ids | Comma separated list of location Ids to limit devices.  Blank is all locations which the specified account has access to. |
 
