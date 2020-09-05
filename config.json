@@ -1,9 +1,9 @@
 {
-  "name": "Ring Devices via MQTT",
-  "version": "3.3.0",
+  "name": "Ring Devices",
+  "version": "4.0.0",
   "slug": "ring_mqtt",
   "description": "Integrate Ring Alarm, Smart Lighting and other devices via MQTT",
-  "startup": "before",
+  "startup": "application",
   "boot": "auto",
   "arch": [
     "aarch64",
@@ -12,30 +12,23 @@
     "armv7",
     "i386"
   ],
-  "host_network": true,
+  "image": "tsightler/ring-mqtt-ha-addon",
   "webui": "http://[HOST]:[PORT:55123]",
+  "ingress": true,
+  "ingress_port": 55123,
+  "services": ["mqtt:need"],
   "options": {
-    "host": "localhost",
-    "port": 1883,
-    "ring_topic": "ring",
-    "hass_topic": "homeassistant/status",
-    "mqtt_user": "<mqtt_or_hassio_user>",
-    "mqtt_pass": "<mqtt_or_hassio_password>",
-    "ring_token": "",
     "enable_cameras": false,
     "enable_modes": false,
+    "enable_panic": false,
+    "ring_token": "",
     "location_ids": [""]
   },
   "schema": {
-   "host": "str",
-    "port": "port",
-    "ring_topic": "str",
-    "hass_topic": "str",
-    "mqtt_user": "str",
-    "mqtt_pass": "str",
-    "ring_token": "str",
     "enable_cameras": "bool",
     "enable_modes": "bool",
-    "location_ids": ["str"]  
+    "enable_panic": "bool",
+    "ring_token": "str",
+    "location_ids": ["str"] 
   }
 }

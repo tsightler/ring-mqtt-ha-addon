@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bashio
 echo "-------------------------------------------------------"
 echo "| Ring Device Integration via MQTT                    |"
 echo "| Addon for Hass.io                                   |"
@@ -17,4 +17,8 @@ npm audit fix
 echo "-------------------------------------------------------"
 echo Running ring-mqtt...
 chmod +x ring-mqtt.js
+export MQTTHOST=$(bashio::services mqtt "host")
+export MQTTPORT=$(bashio::services mqtt "port")
+export MQTTUSER=$(bashio::services mqtt "username")
+export MQTTPASSWORD=$(bashio::services mqtt "password")
 DEBUG=ring-mqtt HASSADDON=true exec /ring-mqtt/ring-mqtt.js
