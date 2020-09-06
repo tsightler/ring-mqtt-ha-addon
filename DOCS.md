@@ -1,13 +1,13 @@
-# Ring Devices via MQTT Add-on for Home Assistant (Development)
-This Home Assistant add-on provides integration of Ring devices using the [ring-mqtt](https://github.com/tsightler/ring-mqtt) script.  Currently most alarm and smart lighting devices are supported as well as camera functions and some 3rd party sensors and switches.  Camera support is disabled by default since these are supported via the native Ring component in Home Assistant, but can be enabled if you prefer to use the support here.
+## !!! Important Message for users upgrading from 3.x versions !!!
+If the addon fails to start after upgrading to 4.x with a message like "Failed to start addon" or "Unknown error, see logs" please make a copy of your config settings and remove, reinstall and reconfigure the addon.  This should correct the issue.
 
-***This add-on requires a working MQTT broker.  The Mosquitto MQTT add-on for Home Assistant is highly recommended.***
-
-### Configuration
+## Configuration
 ***Ring now requires two-factor authentication (2FA) so the username and password options have been removed from this add-on.***
 ***Please read the instructions below to generate a refresh token.***
 
-With the 4.0 release of this addon, efforts have been made to dramatically simplify configuration.  No manual settings should be required except to enable optional features as desired.  MQTT settings are now read automatically via the Home Assistant services API so no manual MQTT configuraiton is needed and these options have been removed from the addon.  The web based token generator now fully integrates into Home Assistant via the Ingress functionality so is fully embedded into the Home Assistant UI and requires no external ports.
+With the 4.0 release of this addon, efforts have been made to dramatically simplify configuration.  For many cases no manual settings should be required except to enable optional features as desired.  The addon now attempts to autoamtically discover required MQTT settings via the Home Assistant services API so, for many cases, no manual MQTT configuraiton is needed, but they can still be overridden for cases where discovery fails or doesn't work such as setups using an external MQTT broker vs the official Mosquitto addon.
+
+The web based token generator now fully integrates into Home Assistant via the Ingress functionality so is fully embedded into the Home Assistant UI and requires no external ports.
 
 To genereate a token, simply open the web UI for the addon (takes 5-10 seconds to start after starting the addon) and follow the instructions in the wizard to enter your Ring username/password and then the 2FA code sent via email/text.  Once you enter your access information the add-on will save the current token and attempt to start the connection to the Ring servers.  You will ***NOT*** need to copy and paste the token to your configuration.  Refresh tokens are only valid for a limited time (typically 60 minutes) so, going forward, the script will acquire and save new refresh tokens to the state file.  You will ***NOT*** see your current refresh token in the configuraiton and the refresh_token field can remain blank in the add-on UI.
 
@@ -22,3 +22,7 @@ To configure this plugin please review the following options:
 | enable_panic | When set to true, the alarm control panel device will expose two switches for activating panic alarms for police/fire (you can also build automations for police/fire alarms by monitoring these switches)  |
 | ring_token | Used only as fallback, should be blank for most cases, please use the Web UI to generate a token |
 | location_ids | Comma separated list of location Ids to limit devices.  Blank is all locations which the specified account has access to. |
+| mqtt_host | Manually specify/override auto deteceted MQTT hostname/IP address |
+| mqtt_port | Manually specify/override auto detected MQTT host TCP port |
+| mqtt_user | Manually specify/override auto detected MQTT user |
+| mqtt_password | Manually specify/override auto detected MQTT password |

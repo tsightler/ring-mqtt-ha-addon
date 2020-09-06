@@ -1,4 +1,9 @@
-##v4.0.0
+## v4.0.1
+- Fixes for various MQTT discovery issues
+- Reintroduce manual options for MQTT broker settings (override automatic discovery)
+- Minor fixes for Base Station volume and info sensor and Keypad volume
+
+## v4.0.0
 - Support for Home Assistant Device Registry
 - Each device has an "info" sensor updated at least every 5 minutes. State is JSON data with values unique to each device type (battery level, tamper status, AC state, wireless strength, firmware info, serial number, etc)
 - Support for monitoring alarm state

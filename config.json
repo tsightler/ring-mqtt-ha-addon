@@ -1,6 +1,6 @@
 {
   "name": "Ring Devices",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "slug": "ring_mqtt",
   "description": "Integrate Ring Alarm, Smart Lighting and other devices via MQTT",
   "startup": "application",
@@ -13,7 +13,7 @@
     "i386"
   ],
   "image": "tsightler/ring-mqtt-ha-addon",
-  "webui": "http://[HOST]:[PORT:55123]",
+  "webui": "http://[HOST]:[PORT:55123]/",
   "ingress": true,
   "ingress_port": 55123,
   "services": ["mqtt:need"],
@@ -22,6 +22,10 @@
     "enable_modes": false,
     "enable_panic": false,
     "ring_token": "",
+    "mqtt_host": "<auto_detect>",
+    "mqtt_port": "<auto_detect>",
+    "mqtt_user": "<auto_detect>",
+    "mqtt_password": "<auto_detect>",
     "location_ids": [""]
   },
   "schema": {
@@ -29,6 +33,10 @@
     "enable_modes": "bool",
     "enable_panic": "bool",
     "ring_token": "str",
+    "mqtt_host": "str",
+    "mqtt_port": "str",
+    "mqtt_user": "str",
+    "mqtt_password": "str",
     "location_ids": ["str"] 
   }
 }
