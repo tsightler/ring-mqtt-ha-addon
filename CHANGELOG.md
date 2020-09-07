@@ -1,3 +1,7 @@
+## v4.0.2
+- Additional volume control fixes for base station and keypad
+- Volume controls show up as lights due to limitations of MQTT component available but you change icons and labels in frontend.
+
 ## v4.0.1
 - Fixes for various MQTT discovery issues
 - Reintroduce manual options for MQTT broker settings (override automatic discovery)
