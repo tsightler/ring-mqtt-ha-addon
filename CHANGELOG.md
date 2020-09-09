@@ -1,3 +1,6 @@
+## v4.0.3
+- Fix for Smart Lighting motion sensor discovery bug introduced in 4.0
+
 ## v4.0.2
 - Additional volume control fixes for base station and keypad
 - Volume controls show up as lights due to limitations of MQTT component available but you change icons and labels in frontend.
