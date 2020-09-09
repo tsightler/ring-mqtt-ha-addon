@@ -1,3 +1,9 @@
+## v4.0.4
+- Minor fixes for smart lighting support
+- Fix (hopefully) non-fatal resubscribe errors
+- Fix a few typos in various devices
+- Bump MQTT dependency to 4.2.1
+
 ## v4.0.3
 - Fix for Smart Lighting motion sensor discovery bug introduced in 4.0
 
