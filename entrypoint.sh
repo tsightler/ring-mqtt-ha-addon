@@ -1,7 +1,7 @@
 #!/usr/bin/env bashio
 echo "-------------------------------------------------------"
-echo "| Ring Device Integration via MQTT                    |"
-echo "| Addon for Home Assistant                            |"
+echo "| Ring Device via MQTT                                |"
+echo "| Add-on for Home Assistant                           |"
 echo "|                                                     |"
 echo "| Report issues at:                                   |"
 echo "| https://github.com/tsightler/ring-mqtt-ha-addon     |"
