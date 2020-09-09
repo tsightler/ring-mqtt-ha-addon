@@ -1,10 +1,10 @@
 #!/usr/bin/env bashio
 echo "-------------------------------------------------------"
 echo "| Ring Device Integration via MQTT                    |"
-echo "| Addon for Hass.io                                   |"
+echo "| Addon for Home Assistant                            |"
 echo "|                                                     |"
 echo "| Report issues at:                                   |"
-echo "| https://github.com/tsightler/ring-mqtt-hassio-addon |"
+echo "| https://github.com/tsightler/ring-mqtt-ha-addon     |"
 echo "-------------------------------------------------------"
 echo ring-mqtt.js version $(cat /ring-mqtt/package.json | grep version | cut -f4 -d'"')
 echo Node version $(node -v)
