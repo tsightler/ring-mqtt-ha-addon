@@ -1,6 +1,6 @@
 #!/usr/bin/env bashio
 echo "-------------------------------------------------------"
-echo "| Ring Device via MQTT                                |"
+echo "| Ring Devices via MQTT                               |"
 echo "| Add-on for Home Assistant                           |"
 echo "|                                                     |"
 echo "| Report issues at:                                   |"
