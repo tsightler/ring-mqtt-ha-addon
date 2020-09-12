@@ -1,6 +1,6 @@
 {
   "name": "Ring Devices",
-  "version": "4.0.4",
+  "version": "4.1.0",
   "slug": "ring_mqtt",
   "description": "Integrate Ring Alarm, Smart Lighting and other devices via MQTT",
   "startup": "application",
@@ -12,7 +12,7 @@
     "armv7",
     "i386"
   ],
-  "image": "tsightler/ring-mqtt-ha-addon",
+  "image": "tsightler/ring-mqtt",
   "webui": "http://[HOST]:[PORT:55123]/",
   "ingress": true,
   "ingress_port": 55123,
@@ -26,7 +26,8 @@
     "mqtt_port": "<auto_detect>",
     "mqtt_user": "<auto_detect>",
     "mqtt_password": "<auto_detect>",
-    "location_ids": [""]
+    "location_ids": [""],
+    "branch": "addon"
   },
   "schema": {
     "enable_cameras": "bool",
@@ -37,6 +38,7 @@
     "mqtt_port": "str",
     "mqtt_user": "str",
     "mqtt_password": "str",
-    "location_ids": ["str"] 
+    "location_ids": ["str"],
+    "branch": "str"
   }
 }

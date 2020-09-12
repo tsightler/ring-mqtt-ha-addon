@@ -1,3 +1,12 @@
+## v4.1.0
+- New Feature: Branches
+  Simple testing of latest git repo versions from master or dev branch without updating addon.
+- Use common image for addon and standalone Docker users
+- Reduced Docker image size by ~65MB
+- Fix issue with Docker image not being cleaned during upgrades/uninstall (unfortunately won't help for existing images, suggest existing users run "docker system prune" to remove old images)
+- Web tweaks to work reasonably with both dark/light themes
+- Minor fix for CO sensor to report correct manufacturer
+
 ## v4.0.4
 - Minor fixes for smart lighting support
 - Fix (hopefully) non-fatal resubscribe errors
