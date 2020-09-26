@@ -1,7 +1,6 @@
 ## v4.2.0
 - Add support for Zwave Range Extender info sensor data (thanks to @alexanv1)
 - Make volume control support configurable
-- Minor fix for running on 10.x Node versions
 - Monitor legacy hass/status stopic for Home Assistant restarts
 - Documentation updates and cleanups
 
