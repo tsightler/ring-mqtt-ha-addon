@@ -21,13 +21,13 @@ To configure this plugin please review the following options:
 | enable_modes | For locations without a Ring alarm enable a control panel for setting Location Modes instead |
 | enable_panic | When set to true, the alarm control panel device will expose two switches for activating panic alarms for police/fire (you can also build automations for police/fire alarms by monitoring these switches)  |
 | enable_volume | When set to true, volume control for Keypads and Base Station will be supported.  See [Volume Control](#volume-control) for details. |
-| ring_token | Used only as fallback, should be blank for most cases, please use the Web UI to generate a token |
-| location_ids | Comma separated list of location Ids to limit devices.  Blank is all locations which the specified account has access to. |
 | mqtt_host | Manually specify/override auto deteceted MQTT hostname/IP address |
 | mqtt_port | Manually specify/override auto detected MQTT host TCP port |
 | mqtt_user | Manually specify/override auto detected MQTT user |
 | mqtt_password | Manually specify/override auto detected MQTT password |
 | branch | Default value "addon" runs code from local Docker image.  See [Branch Feature](#branch-feature) for details. |
+| ring_token | Used only as fallback, should be blank for most cases, please use the Web UI to generate a token |
+| location_ids | Comma separated list of location Ids to limit devices.  Blank is all locations which the specified account has access to. |
 
 ## Volume Control
 Ring shared users do not have access to control the Base Station volume (any user can control Keypad volume) so, to enable control of Base Station volume using this addon, the refresh token must be generated using the primary Ring account. During startup the addon attempts to detect if the account can control the base station volume and only enables the volume control if it determines the accout has access. This is a limitation of the Ring API as even the offical Ring App does not offer volume control to shared users.
