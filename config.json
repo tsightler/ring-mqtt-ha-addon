@@ -1,6 +1,6 @@
 {
   "name": "Ring Devices",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "slug": "ring_mqtt",
   "description": "Integrate Ring Alarm, Smart Lighting and other devices via MQTT",
   "startup": "application",
@@ -22,24 +22,27 @@
     "enable_cameras": false,
     "enable_modes": false,
     "enable_panic": false,
-    "ring_token": "",
+    "enable_volume": false,
     "mqtt_host": "<auto_detect>",
     "mqtt_port": "<auto_detect>",
     "mqtt_user": "<auto_detect>",
     "mqtt_password": "<auto_detect>",
-    "location_ids": [""],
-    "branch": "addon"
+    "branch": "addon",
+    "ring_token": "",
+    "location_ids": [""]
   },
   "schema": {
     "enable_cameras": "bool",
     "enable_modes": "bool",
     "enable_panic": "bool",
+    "enable_volume": "bool",
     "ring_token": "str",
     "mqtt_host": "str",
     "mqtt_port": "str",
     "mqtt_user": "str",
     "mqtt_password": "str",
-    "location_ids": ["str"],
-    "branch": "str"
+    "branch": "str",
+    "ring_token": "str",
+    "location_ids": ["str"]
   }
 }
