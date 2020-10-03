@@ -1,3 +1,8 @@
+## v4.2.1
+- Add tilt sensor support (Garage Doors)
+- Fix range extender device name
+- Minor doc updates
+
 ## v4.2.0
 - Add support for Zwave Range Extender info sensor data (thanks to @alexanv1)
 - Make volume control support configurable
