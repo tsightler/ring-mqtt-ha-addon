@@ -1,3 +1,7 @@
+## v4.2.2
+ - Bump dependencies to latest versions
+ - Rebuild Docker image with latest base to pull in latest node v12 version (12.20.1)
+
 ## v4.2.1
 - Add tilt sensor support (Garage Doors)
 - Fix range extender device name
