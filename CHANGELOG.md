@@ -1,6 +1,9 @@
+## v4.3.0
+- Add support for sending snapshot images on camera motion events (must be explicitly enabled)
+ 
 ## v4.2.2
- - Bump dependencies to latest versions
- - Rebuild Docker image with latest base to pull in latest node v12 version (12.20.1)
+- Bump dependencies to latest versions
+- Rebuild Docker image with latest base to pull in latest node v12 version (12.20.1)
 
 ## v4.2.1
 - Add tilt sensor support (Garage Doors)
