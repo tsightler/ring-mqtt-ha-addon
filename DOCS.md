@@ -18,6 +18,7 @@ To configure this plugin please review the following options:
 | Config Option | Description |
 | --- | --- |
 | enable_cameras | Default false since the native Ring component for Home Assistant supports these, set to true to use camera support in this add-on |
+| enable_snapshots | When enabled, binary snapshot image data is sent via snapshot topic on motion events | false |
 | enable_modes | For locations without a Ring alarm enable a control panel for setting Location Modes instead |
 | enable_panic | When set to true, the alarm control panel device will expose two switches for activating panic alarms for police/fire (you can also build automations for police/fire alarms by monitoring these switches)  |
 | enable_volume | When set to true, volume control for Keypads and Base Station will be supported.  See [Volume Control](#volume-control) for details. |
