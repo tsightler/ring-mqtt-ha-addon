@@ -1,6 +1,6 @@
 {
   "name": "Ring Devices",
-  "version": "4.3.1",
+  "version": "4.3.2",
   "slug": "ring_mqtt",
   "description": "Integrate Ring Alarm, Smart Lighting and other devices via MQTT",
   "startup": "application",
@@ -20,7 +20,7 @@
   "services": ["mqtt:need"],
   "options": {
     "enable_cameras": false,
-    "enable_snapshots": "none",
+    "snapshot_mode": "none",
     "enable_modes": false,
     "enable_panic": false,
     "enable_volume": false,
@@ -34,7 +34,7 @@
   },
   "schema": {
     "enable_cameras": "bool",
-    "enable_snapshots": "str",
+    "snapshot_mode": "str",
     "enable_modes": "bool",
     "enable_panic": "bool",
     "enable_volume": "bool",
