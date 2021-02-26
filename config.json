@@ -20,7 +20,7 @@
   "services": ["mqtt:need"],
   "options": {
     "enable_cameras": false,
-    "snapshot_mode": "none",
+    "snapshot_mode": "disabled",
     "enable_modes": false,
     "enable_panic": false,
     "enable_volume": false,
