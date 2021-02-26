@@ -18,7 +18,7 @@ To configure this plugin please review the following options:
 | Config Option | Description |
 | --- | --- |
 | enable_cameras | Default false since the native Ring component for Home Assistant supports these, set to true to use camera support in this add-on |
-| enable_snapshots | When enabled, binary snapshot image data is sent via snapshot topic on motion events | false |
+| snapshot_mode | Enable still snapshot image updates from camera, see [Snapshot Options](#snapshot-options) for details | 'disabled' |
 | enable_modes | For locations without a Ring alarm enable a control panel for setting Location Modes instead |
 | enable_panic | When set to true, the alarm control panel device will expose two switches for activating panic alarms for police/fire (you can also build automations for police/fire alarms by monitoring these switches)  |
 | enable_volume | When set to true, volume control for Keypads and Base Station will be supported.  See [Volume Control](#volume-control) for details. |
@@ -29,6 +29,22 @@ To configure this plugin please review the following options:
 | branch | Default value "addon" runs code from local Docker image.  See [Branch Feature](#branch-feature) for details. |
 | ring_token | Used only as fallback, should be blank for most cases, please use the Web UI to generate a token |
 | location_ids | Comma separated list of location Ids to limit devices.  Blank is all locations which the specified account has access to. |
+
+## Snapshot Options
+Since ring-mqtt version 4.3 ring-mqtt has the ability to send still image snapshots.  These images will automatically display in many home automation platforms such as Home Assistant as a camera entity.  Please note that these are not live action as MQTT is limited in this regard, however, even these snapshots can be quite useful.  There are a few modes that can be enabled:
+
+| Mode | Description |
+| --- | --- |
+| disabled | Snapshot images will be disabled |
+| motion | Snapshots are refreshed only on detected motion events |
+| interval | Snapshots are refreshed on scheduled interval only |
+| all | Snapshots are refreshed on both scheduled and motion events, scheduled snapshots are paused during active motions events |
+
+When snapshot support is enabled, the script always attempts to grab a snapshot on initial startup.
+
+When interval mode is selected, snapshots of cameras with wired power supply are taken every 30 seconds by default, for battery powered cameras taking a snapshot every 30 seconds leads to signifcant power drain so snapshots are taken every 10 minutes, however, if the Ring Snapshot Capture feature is enabled, snapshots are instead taken at the frequency selected in the Ring app for this feature (minium 5 minutes for battery powere cameras).
+
+It is also possible to manually override the snapshot interval, although the minimum time is 10 seconds.  Simply send the value in seconds to the ring/<location_id>/camera/<device_id>/snapshot/interval topic for the specific camera to override the default refresh interval.
 
 ## Volume Control
 Ring shared users do not have access to control the Base Station volume (any user can control Keypad volume) so, to enable control of Base Station volume using this addon, the refresh token must be generated using the primary Ring account. During startup the addon attempts to detect if the account can control the base station volume and only enables the volume control if it determines the account has access. This is a limitation of the Ring API as even the official Ring App does not offer volume control to shared users.
