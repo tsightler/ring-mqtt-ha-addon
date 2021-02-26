@@ -1,3 +1,9 @@
+## v4.3.2
+ - Change enable_snapshots config option to snapshot_mode (fix for addon upgrade issue)
+
+## v4.3.1
+ - Add support for scheduled snapshot updates (see docs for details)
+ 
 ## v4.3.0
 - Add support for sending snapshot images on camera motion events (must be explicitly enabled)
  
