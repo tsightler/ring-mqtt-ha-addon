@@ -35,22 +35,22 @@ Since ring-mqtt version 4.3 ring-mqtt has the ability to send still image snapsh
 
 | Mode | Description |
 | --- | --- |
-| disabled | Snapshot images will be disabled |
-| motion | Snapshots are refreshed only on detected motion events |
-| interval | Snapshots are refreshed on scheduled interval only |
+| disabled | Snapshot image support will be disabled and not snapshot images are sent via MQTT |
+| motion | Snapshot images are refreshed only on detected camera motion events |
+| interval | Snapshot images are refreshed via scheduled intervals only |
 | all | Snapshots are refreshed on both scheduled and motion events, scheduled snapshots are paused during active motions events |
 
 When snapshot support is enabled, the script always attempts to grab a snapshot on initial startup.
 
-When interval mode is selected, snapshots of cameras with wired power supply are taken every 30 seconds by default, for battery powered cameras taking a snapshot every 30 seconds leads to signifcant power drain so snapshots are taken every 10 minutes, however, if the Ring Snapshot Capture feature is enabled, snapshots are instead taken at the frequency selected in the Ring app for this feature (minium 5 minutes for battery powere cameras).
+When interval mode is selected, snapshots of cameras with wired power supply are taken every 30 seconds by default, for battery powered cameras taking a snapshot every 30 seconds leads to signifcant power drain so snapshots are taken every 10 minutes, however, if the Ring Snapshot Capture feature is enabled, snapshots are instead taken at the frequency selected in the Ring app for this feature (minimum 5 minutes for battery powered cameras).
 
-It is also possible to manually override the snapshot interval, although the minimum time is 10 seconds.  Simply send the value in seconds to the ring/<location_id>/camera/<device_id>/snapshot/interval topic for the specific camera to override the default refresh interval.
+It is also possible to manually override the snapshot interval, although the minimum time between snapshots is 10 seconds.  Simply send the value in seconds to the ring/<location_id>/camera/<device_id>/snapshot/interval topic to override the detected default refresh interval.
 
 ## Volume Control
 Ring shared users do not have access to control the Base Station volume (any user can control Keypad volume) so, to enable control of Base Station volume using this addon, the refresh token must be generated using the primary Ring account. During startup the addon attempts to detect if the account can control the base station volume and only enables the volume control if it determines the account has access. This is a limitation of the Ring API as even the official Ring App does not offer volume control to shared users.
 
 **!!! Important Note about Volume Control in Home Assistant !!!**\
-Due to the limitations of available MQTT integration components with Home Assistant, volume control entities will appears as a "light" with brightness function. The brightness control is used to set the volume level while the turning the switch off immediate sets the volume to zero and turning the switch on sets the volume to 65%, although you can also turn the volume back on by setting the slider volume to any level other than zero. Overall this works well, you can override icons to make it look reasonable in the Lovelace UI and automations can be used to set device volume based on time-of-day, alarm mode, etc., but this approach can have some unexpected side effects. For example, if you have an automation that turns off all lights when you leave, this automation will likely also silence the volume on the keypad/base station since Home Assistant sees the device as a light. Be aware of these possible behaviors before enabling the volume control feature.  Perhaps in the future a better MQTT component will be available to expose this functionality.
+Due to the limitations of available MQTT integration components with Home Assistant, volume control entities will appears as a "light" with brightness function. The brightness control is used to set the volume level while turning the switch off immediately sets the volume to zero and turning the switch on sets the volume to 65%, although you can also turn the volume back on by setting the slider volume to any level other than zero. Overall this works well, you can override icons to make it look reasonable in the Lovelace UI and automations can be used to set device volume based on time-of-day, alarm mode, etc., but this approach can have some unexpected side effects. For example, if you have an automation that turns off all lights when you leave, this automation will likely also silence the volume on the keypad/base station since Home Assistant sees the device as a light. Be aware of these possible behaviors before enabling the volume control feature.  Perhaps in the future a better MQTT component will be available to expose this functionality.
 
 ## Branch Feature
 The branch feature is designed to make testing the latest code easier for addon users. If you want to test the latest code from the ring-mqtt Github project simply set "latest" or "dev" and, during startup the addon will pull the latest code from the master or dev branch respectively.  To revert to stock code for the addon just simple change the option back to "addon" in the config.  Note that this setting is recommended for testing only as it requires an internet connection to start and the dev branch may not always be in a function state.
