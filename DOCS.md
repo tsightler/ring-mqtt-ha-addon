@@ -31,7 +31,7 @@ To configure this plugin please review the following options:
 | location_ids | Comma separated list of location Ids to limit devices.  Blank is all locations which the specified account has access to. |
 
 ## Arming Bypass
-By default, attempts to arm the alarm when any contact sensors are in faulted state will fail with an audible message from the base station that sensors require bypass. Arming will retry 5 times evern 10 seconds giving time for doors/windows to be closed, however, if sensors still require bypass after this time, arming will fail.
+By default, attempts to arm the alarm when any contact sensors are in faulted state will fail with an audible message from the base station that sensors require bypass. Arming will retry 5 times every 10 seconds giving time for doors/windows to be closed, however, if sensors still require bypass after this time, arming will fail.
 
 Starting with version 4.4.0, ring-mqtt exposes an Arming Bypass Mode switch which can by toggled to change this arming behavior. When this switch is "on", arming commands will automatically bypass any faulted contact sensors. While this option always default to "off", if you prefer the default state to always be "on" you can create an automation to toggle it to "on" state any time it's detect as off.
 
