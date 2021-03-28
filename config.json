@@ -18,6 +18,7 @@
   "ingress_port": 55123,
   "services": ["mqtt:need"],
   "tmpfs": true,
+  "init": false,
   "options": {
     "enable_cameras": false,
     "snapshot_mode": "disabled",
