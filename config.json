@@ -9,8 +9,7 @@
     "aarch64",
     "amd64",
     "armhf",
-    "armv7",
-    "i386"
+    "armv7"
   ],
   "url": "https://github.com/tsightler/ring-mqtt-ha-addon",
   "image": "tsightler/ring-mqtt",
