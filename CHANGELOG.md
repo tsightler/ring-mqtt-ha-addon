@@ -10,6 +10,10 @@
  - Misc code cleanups and improvements
  - Drop support for i386 architecture for addon
 
+## v4.4.0
+ - Add Arming Bypass Mode switch
+ - Misc code cleanups and improvements
+
 ## v4.3.2
  - Change enable_snapshots config option to snapshot_mode (fix for addon upgrade issue)
 
