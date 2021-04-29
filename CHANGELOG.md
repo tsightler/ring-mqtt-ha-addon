@@ -6,13 +6,13 @@
 ## v4.5.3
  - Implement reconnect improvements for cameras after lost connections
  - Bump ring-client-api version
- 
+
 ## v4.5.2
- - Second attempt to fix truncation of video length (tries to read property if available, otherwise keeps stream alive for 60 seconds)
- 
+- Second attempt to fix truncation of video length (tries to read property if available, otherwise keeps stream alive for 60 seconds)
+
 ## v4.5.1
- - When attempting to grab snapshot from livestream for battery cameras, set stream duration equal to video recording length setting to (hopefully) avoid truncating video recording
- 
+- When attempting to grab snapshot from livestream for battery cameras, set stream duration equal to video recording length setting to (hopefully) avoid truncating video recording
+
 ## v4.5.0
  - Snapshot on motion reliability improvements for line powered cameras
  - Snapshot on motion attempts to grab image from livestream for battery powered cameras.  This is slower, less reliable and sometimes produces lower quality images vs snapshots, but as battery cameras don't allow snapshots wile streaming, it's the only option for getting a snapshot of a motion event
