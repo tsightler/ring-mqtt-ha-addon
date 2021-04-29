@@ -7,7 +7,7 @@
  - Implement reconnect improvements for cameras after lost connections
  - Bump ring-client-api version
  
- ## v4.5.2
+## v4.5.2
  - Second attempt to fix truncation of video length (tries to read property if available, otherwise keeps stream alive for 60 seconds)
  
 ## v4.5.1
