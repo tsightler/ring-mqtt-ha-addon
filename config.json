@@ -1,6 +1,6 @@
 {
   "name": "Ring Devices",
-  "version": "4.5.4",
+  "version": "4.5.5",
   "slug": "ring_mqtt",
   "description": "Integrate Ring Alarm, Smart Lighting and other devices via MQTT",
   "startup": "application",

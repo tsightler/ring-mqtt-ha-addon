@@ -1,4 +1,4 @@
-### Gathering logs in Hass.io
+### Gathering logs in HassOS
 
 When submitting a bug report one item of critical importance is gathering proper, full logs.  While Hass.io does show addon logs in the web interface it is only the most recent and sometimes misses critical errors that are useful for troubleshooting issues, especially if those error cause the script to exit.  The steps below can be used to gather a full set of logs from the startup of the docker container to shutdown:
 
