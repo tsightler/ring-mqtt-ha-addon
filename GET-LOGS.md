@@ -5,10 +5,10 @@ When submitting a bug report one item of critical importance is gathering proper
 1) Install the excellent [SSH & Web Terminal](https://github.com/hassio-addons/addon-ssh) addon (available in the Community addons section - search "Web Terminal") 
 2) Configure the addon with an SSH password (strong password) or public key
 3) Disable "Protection mode" in the addon, this is required to access docker commands in Hass.io
-4) Start the addon and connect to the system via SSH (it's technically possible to use the Web terminal, but I find copy/paste operations there difficult)
-5) Now in the SSH terminal copy and paste the following command in the terminal but do not yet press enter:
+4) Start the addon and connect to the system via SSH or the web terminal
+5) In the terminal copy and paste the following command to dump the current addon logs to a file:
 ```
-docker logs -f `docker ps | grep ring-mqtt | cut -f 1 -d ' '`
+docker logs `docker ps | grep ring-mqtt | cut -f 1 -d ' '` > ring-mqtt.log 2&>1
 ```
-6) Now start the ring-mqtt addon and then swtich back to the SSH terminal and press enter, you should see logs from the build process and the logs will continue until the script exits.
-7) After the script exits or once the error appears, copy and paste all relavant logs, especially error messages, and include them in the bug report.
+6) Using a tool like WinSCP to copy the ring-mqtt.log file to your computer 
+7) Delete the ring-mqtt.log file on your Home Assistant instance before existing SSH
