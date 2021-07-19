@@ -1,8 +1,8 @@
 {
-  "name": "Ring Devices",
-  "version": "4.5.7",
+  "name": "Ring Devices MQTT Integration",
+  "version": "4.6.0",
   "slug": "ring_mqtt",
-  "description": "Integrate Ring Alarm, Smart Lighting and other devices via MQTT",
+  "description": "Integrate Ring Alarm, Smart Lighting and Cameras into Home Assistant via MQTT",
   "startup": "application",
   "boot": "auto",
   "arch": [
@@ -23,7 +23,8 @@
     "snapshot_mode": "disabled",
     "enable_modes": false,
     "enable_panic": false,
-    "enable_volume": false,
+    "beam_duration": 0,
+    "disarm_code": "",
     "mqtt_host": "<auto_detect>",
     "mqtt_port": "<auto_detect>",
     "mqtt_user": "<auto_detect>",
@@ -37,13 +38,14 @@
     "snapshot_mode": "str",
     "enable_modes": "bool",
     "enable_panic": "bool",
-    "enable_volume": "bool",
+    "beam_duration": "int(0,32767)",
+    "disarm_code": "str",
     "mqtt_host": "str",
-    "mqtt_port": "str",
+    "mqtt_port": "port",
     "mqtt_user": "str",
-    "mqtt_password": "str",
+    "mqtt_password": "password",
     "branch": "str",
-    "ring_token": "str",
+    "ring_token": "password",
     "location_ids": ["str"]
   }
 }

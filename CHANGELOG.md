@@ -1,3 +1,16 @@
+## v4.6.0
+ - Adapt fan component to new Home Assistant 2021.3 fan schema based on percentage vs preset speeds.  Presets for "low, medium, high" will still work but it's now possible to use the new percent based speed topics which map directly to Ring app and Home Assistant.  This is especially useful for fans which support more than 3 speeds
+ - Add support to set the default "on" duraton for Ring Smart Lighting via config option beam_duration (or BEAMDURATION envionment variable), please refer to README for more details
+ - Add ability to override "on" duration for individual Ring Smart Lights via MQTT topic, also uses number integraiton to present in Home Assistant for easy access via Lovalace UI or automations
+ - Add support for "arming" state during exit delay
+ - Add support for configuring a disarm code for Home Assistant (See disarm_code option in README)
+ - Add support for reporting basic status and attributes of Ring External Siren
+ - Docker images now enable debug logging by default (was already true of addon)
+ 
+ **--Breaking Changes--**
+ - Switched volume controls to use Home Assistant number vs light integration, any automations for volume changes will need to be updated
+ - Removed "enable_volume" config option since this will no longer interfere with users light based automations so no risk to enabling it for all
+
 ## v4.5.7
  - Switch to custom ring-client-api with fix for hang during network/service outages
  - Add MotionDetectionEnabled attribute to camera motion entity attributes
