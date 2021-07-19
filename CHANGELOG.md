@@ -8,6 +8,7 @@
  - Docker images now enable debug logging by default (was already true of addon)
  
  **--Breaking Changes--**
+ - Fan automations in Home Assistant will likely need to be changed to use the new fan services (see Fan section of Breaking Changes in [Home Assistant 2021.3 release notes](https://www.home-assistant.io/blog/2021/03/03/release-20213/#breaking-changes))
  - Switched volume controls to use Home Assistant number vs light integration, any automations for volume changes will need to be updated
  - Removed "enable_volume" config option since this will no longer interfere with users light based automations so no risk to enabling it for all
 
