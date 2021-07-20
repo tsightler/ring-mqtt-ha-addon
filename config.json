@@ -41,7 +41,7 @@
     "beam_duration": "int(0,32767)",
     "disarm_code": "str",
     "mqtt_host": "str",
-    "mqtt_port": "port",
+    "mqtt_port": "str",
     "mqtt_user": "str",
     "mqtt_password": "password",
     "branch": "str",
