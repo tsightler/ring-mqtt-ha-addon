@@ -1,5 +1,5 @@
 {
-  "name": "Ring Devices MQTT Integration",
+  "name": "Ring Device Integration via MQTT",
   "version": "4.6.0",
   "slug": "ring_mqtt",
   "description": "Integrate Ring Alarm, Smart Lighting and Cameras into Home Assistant via MQTT",
