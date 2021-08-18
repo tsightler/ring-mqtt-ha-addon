@@ -4,7 +4,7 @@ When submitting a bug report one item of critical importance is gathering proper
 
 1) Install the excellent [SSH & Web Terminal](https://github.com/hassio-addons/addon-ssh) addon (available in the Community addons section - search "Web Terminal") 
 2) Configure the addon with an SSH password (strong password) or public key
-3) Disable "Protection mode" in the addon, this is required to access docker commands in Hass.io
+3) Disable "Protection mode" in the addon, this is required to access docker commands in Home Assistant OS
 4) Start the addon and connect to the system via SSH or the web terminal
 5) In the terminal copy and paste the following command to dump the current addon logs to a compressed file:
 ```
