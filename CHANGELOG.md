@@ -1,14 +1,20 @@
-## v4.7.2
+## v4.7.3
 ***** IMPORTANT NOTE *****  
 
 If upgrading from version 4.6.x or earlier, please read the 4.7.0 change notes as well!
 
+**Minor Enhancements**
+- Documentation updates now note that Chimes only work with primary Ring account, not shared accounts
+- Tweak logging color scheme to improve event readability
+- Fix uncaught exception error handler to properly log error message
+
+**Other Changes**
+- Switch Docker base image to Node LTS-Alpine 3.14 (previously Alpine 3.12)
+
+## v4.7.2 (this version was never released to the addon)
 **Fixed Bugs**
 - Add check for optional entities in publish and command processing to avoid crashes (most commonly an issue for Smart Lighting support where different devices have varying capabilities)
 - Fix broken exit handler
-
-**Minor Enhancements**
-- Tweak color scheme for logging to improve event readability.
 
 ## v4.7.1
 **Fixed Bugs**
