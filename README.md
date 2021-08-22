@@ -1,4 +1,4 @@
-![ring-mqtt-logo](./logo.png)
+![ring-mqtt-logo](https://github.com/tsightler/ring-mqtt-ha-addon/blob/f1b9eab5e5b5a12c08de1df0b6e90ec60c3fd2ca/logo.png)
 
 ![aarch64-shield](https://img.shields.io/badge/aarch64-yes-green.svg)
 ![amd64-shield](https://img.shields.io/badge/amd64-yes-green.svg)
