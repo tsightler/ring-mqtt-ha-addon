@@ -9,7 +9,7 @@ To configure this plugin please review the following options:
 
 | Config Option | Description |
 | --- | --- |
-| enable_cameras | Default false since the native Ring component for Home Assistant supports cameras, set to true to enable camera/chime support in this add-on (plesae note that this addon does NOT support live video, only snapshot images will be sent via the MQTT camera component) |
+| enable_cameras | Default false since the native Ring component for Home Assistant supports cameras, set to true to enable camera/chime support in this add-on.  Access to Chimes cannot be granted to shared users so Chime support requires use of the primary Ring account. Also, this addon does **NOT** support live video, only snapshot images will be sent via the MQTT camera component) |
 | snapshot_mode | Enable still snapshot image updates from camera, see [Snapshot Options](#snapshot-options) for details | 'disabled' |
 | enable_modes | For locations without a Ring alarm enable a control panel for setting Location Modes instead |
 | enable_panic | When set to true, the alarm control panel device will expose two switches for activating panic alarms for police/fire (you can also build automations for police/fire alarms by monitoring these switches)  |
