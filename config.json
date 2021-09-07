@@ -1,6 +1,6 @@
 {
   "name": "Ring Devices via MQTT",
-  "version": "4.7.3",
+  "version": "4.8.0",
   "slug": "ring_mqtt",
   "description": "Integrate Ring Alarm, Smart Lighting and Cameras into Home Assistant via MQTT",
   "startup": "application",
@@ -17,10 +17,18 @@
   "ingress": true,
   "ingress_port": 55123,
   "services": ["mqtt:need"],
+  "ports": {
+    "8554/tcp": null
+  },
+  "ports_description": {
+    "8554/tcp": "RTSP Server External Port - IMPORTANT: Configure livestream username/password before enabling!"
+  },
   "init": false,
   "options": {
     "enable_cameras": false,
     "snapshot_mode": "disabled",
+    "livestream_user": "",
+    "livestream_pass": "",
     "enable_modes": false,
     "enable_panic": false,
     "beam_duration": 0,
@@ -36,6 +44,8 @@
   "schema": {
     "enable_cameras": "bool",
     "snapshot_mode": "str",
+    "livestream_user": "str",
+    "livestream_pass": "str",
     "enable_modes": "bool",
     "enable_panic": "bool",
     "beam_duration": "int(0,32767)",

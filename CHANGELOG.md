@@ -1,3 +1,32 @@
+## v4.8.0
+**New Features**  
+Live Video Streaming is here!  
+
+Since this plugin introduced support for cameras over 2 years ago, the single most requested feature, which I usually answered will "never be supported", is live streaming.  I didn't believe this feature would ever fit within this project simply because this script used MQTT for integration, which simply isn't a platform that can support streaming, other than the limited capabilities used for the snapshot feature.
+
+However, because of continued demand for live streaming, I was reasearching and prototyping possible methods for integrating live streams when I saw a post from [gilliginsisland](https://github.com/jeroenterheerdt/ring-hassio/issues/51) on the ring-hassio Github issues page.  The final result uses rtsp-simple-server with an on-demand script that triggers the livestream via MQTT, and it was the concept in that post that provided the imputus to finally do the work in a way that felt like a proper fit within this project.
+
+I have some additional features planned for the coming weeks, mainly the ability to play the last X recorded events, but I wanted to get something out there now for people to play with and see how it works in a wider range of environments than my test setup.  
+
+Features included in this release:
+- Easy(-ish) integration with Home Assistant, although note that it is not automatic.  Live streaming cameras must be manually added to Home Assistant configuration.yaml.  Please read [the camera docs](https://github.com/tsightler/ring-mqtt/blob/main/docs/CAMERAS.md) for more details.
+- Support for on-demand live streams.  Streams are started automatically when viewed in Home Assistant and ended 5-10 seconds after the last viewer disconnects
+- Support for external medial player by exposing the RTSP port on the addon any tool that supports RTSP streaming can consume the stream.
+- Support for defining a username and password for authenticating the stream.
+- Manual stream start via the "stream" switch entity or via MQTT command.  Allows for cool things like triggering a recording using automation.
+
+**Minor Enhancments**  
+- Increased maximum allowed time between snapshots from 3600 seconds (1 hour) to 604800 (7 days)
+- Repopulate entities and states much sooner after Home Assistant restart is detected
+- New algorithm for pulling motion snapshots from battery cameras.  Uses less CPU and should generate a more reliable image with less artifacts, but will be a little slower.
+
+**Fixed Bugs**  
+- Fix interval snapshots when using only "interval" setting vs "all"
+
+**Other Changes**  
+- Docker image now uses S6 init system for supervising node process
+- Massive startup script cleanup and standardization
+
 ## v4.7.3
 ***** IMPORTANT NOTE *****  
 
