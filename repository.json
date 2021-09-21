@@ -1,5 +1,5 @@
 {
-  "name": "Ring Devices via MQTT (with Live Stream) Add-on",
+  "name": "Ring Devices via MQTT/RTSP Addon",
   "url": "https://github.com/tsightler/ring-mqtt-ha-addon",
   "maintainer": "tsightler"
 }
