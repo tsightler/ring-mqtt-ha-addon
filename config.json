@@ -1,5 +1,5 @@
 {
-  "name": "Ring-MQTT Addon with RTSP Video Streaming",
+  "name": "Ring-MQTT Addon with Video Streaming",
   "version": "4.8.3",
   "slug": "ring_mqtt",
   "description": "Integrate Ring Alarm, Smart Lighting and Cameras into Home Assistant via MQTT and RTSP",
