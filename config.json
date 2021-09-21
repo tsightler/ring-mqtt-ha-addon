@@ -2,7 +2,7 @@
   "name": "Ring-MQTT with Video Streaming",
   "version": "4.8.3",
   "slug": "ring_mqtt",
-  "description": "Integrate Ring Alarm, Smart Lighting and Cameras into Home Assistant via MQTT and RTSP",
+  "description": "Integrate Ring Devices into Home Assistant via MQTT and RTSP",
   "startup": "application",
   "boot": "auto",
   "arch": [
