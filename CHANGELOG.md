@@ -4,7 +4,7 @@
 - Minor change to default filter for value templates entities to hopefully quiet warnings for openHAB users attempting to leverage this project via the Home Assistant MQTT binding
 
 **Minor Enhancements**  
-- Chimes snooze switch now includes additional JSON attribute with "minutes_remaining" showing approximate number of minutes before snooze expires.
+- Chimes snooze switch now includes additional JSON attribute "minutes_remaining" showing approximate number of minutes before snooze expires.
 
 ## v4.8.3
 **New Features**  
