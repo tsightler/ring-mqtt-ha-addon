@@ -1,6 +1,6 @@
 {
   "name": "Ring-MQTT with Video Streaming",
-  "version": "4.8.3",
+  "version": "4.8.4",
   "slug": "ring_mqtt",
   "description": "Integrate Ring Devices into Home Assistant via MQTT and RTSP",
   "startup": "application",
@@ -21,7 +21,7 @@
     "8554/tcp": null
   },
   "ports_description": {
-    "8554/tcp": "RTSP Server External Port - IMPORTANT: Configure livestream username/password before enabling!"
+    "8554/tcp": "RTSP Server External Port (IMPORTANT: Configure livestream username/password before enabling!)"
   },
   "init": false,
   "options": {
