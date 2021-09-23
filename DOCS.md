@@ -25,13 +25,13 @@ To configure this plugin please review the following options:
 | ring_token | Used only as fallback, should be blank for most cases, please use the Web UI to generate a token |
 | location_ids | Comma separated list of location Ids to limit devices.  Blank is all locations which the specified account has access to. |
 
-### Camera live stream support
-Please read the detailed [camera documentation](https://github.com/tsightler/ring-mqtt/blob/main/docs/CAMERAS.md) for more details on configuring live streaming.
+### Camera video streaming support
+Please read the detailed [camera documentation](https://github.com/tsightler/ring-mqtt/blob/main/docs/CAMERAS.md) for more information on configuring video streaming support.
 
 #### External RTSP Server Access
-When using the camera support for live streams the addon will run a local instance of rtsp-simple-server.  Since the addon runs on the same host as Home Assistant the Home Assistant instance can just access the RTSP server directly via the internal Docker network, however, if you want to access the stream from other host on the network you can expose the RTSP port as well.  Note that, if you choose to expose the port, it is HIGHLY recommended to set a live stream user and password using the appropriate configuration options and, currently RTSP streams are not encrypted, so direct access to the stream is not recommened over the open Internet without a VPN.
+When using the camera support for video streams the addon will run a local instance of rtsp-simple-server.  Since the addon runs on the same host as Home Assistant the Home Assistant instance can access this RTSP server directly via the internal Docker network, however, if you want to access the stream from other host on the network you can expose the RTSP port as well. Note that, if you choose to expose the port, it is HIGHLY recommended to set a live stream user and password using the appropriate configuration options.  Also, the RTSP streams do not currenty support encryption, so direct access to the stream is not recommened over any untrusted network with a VPN.
 
-To export the RTSP port externally simply edit the port settings in the addon configuration tab.  By default the port is disabled and the internal RTSP server listens on TCP port 8554, but you can either expose it on TCP 8554 or on any other available TCP port.  Once exposed you can connect to live streams using any media client that supports RTSP.
+To export the RTSP port externally simply edit the port settings in the addon configuration tab.  By default the port is disabled and the internal RTSP server listens on TCP port 8554, but it can be exposed externally on the same port or via any other available TCP port.  Once exposed it is possible to connect to the videos streams using any media client that supports RTSP.
 
 ## Snapshot Options
 This addon has the ability to send still image snapshots via MQTT.  These images will automatically display in many home automation platforms such as Home Assistant as a camera entity.  Please note that these are not live action as MQTT is limited in this regard, however, even these snapshots can be quite useful.  There are a few modes that can be enabled:
