@@ -56,7 +56,7 @@ By default, attempts to arm the alarm when any contact sensors are in faulted st
 
 This addon exposes an Arming Bypass Mode switch which can by toggled to change this arming behavior. When this switch is "ON", arming commands will automatically bypass any faulted contact sensors or retrofit zones. This option always defaults to "OFF".  If you prefer the default state to be "ON" you can create an automation to toggle it in Home Assistant.
 
-#### Volume Control
+#### Volume Control  
 Ring shared users do not have access to control the Base Station volume (any user can control Keypad volume).  Because of this, to enable control of Base Station volume using this addon, the refresh token must be generated using the primary Ring account. During startup the addon will detect if the account can control the base station volume and only enables the volume control if it determines the account has access. This is a limitation of the Ring API as even the official Ring App does not offer volume control to shared users for teh Base Station.
 
 Volume controls are presented in Home Assistant as number entities on the devices.  You can change them via the Lovalace UI or via Home Assistant automations.
