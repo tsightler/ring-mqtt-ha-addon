@@ -11,4 +11,4 @@ When submitting a bug report one item of critical importance is gathering proper
 docker logs addon_03cabcc9_ring_mqtt 2>&1 | gzip > ring-mqtt.log.gz
 ```
 6) Using a tool like WinSCP, an addon like File Editor, or any other method you prefer, to copy/download the ring-mqtt.log.gz file to your computer 
-7) Delete the ring-mqtt.log.gz file on your Home Assistant instance before exiting SSH
+7) Delete the ring-mqtt.log.gz file on your Home Assistant instance before exiting SSH  
