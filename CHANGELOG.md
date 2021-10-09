@@ -306,4 +306,4 @@ A primary goal of the new engine is to be 100% compatible with prior ring-mqtt t
 - Improved debug output with more organized location/device discovery output
 - Simplified and standardized location/device handling code (still more work to do but becoming far more maintainable)
 
-##Changes for v3.3.0 and earlier were not tracked in this file
+##Changes for v3.3.0 and earlier were not tracked in this file  
