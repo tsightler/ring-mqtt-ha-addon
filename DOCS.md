@@ -1,7 +1,7 @@
 ## Configuration
 This addon supports simple configuration that, for many cases, requires no manual settings other than enabling any optional features in the configuration.  The addon automatically discovers required MQTT settings via the Home Assistant services API but, in cases where auto detection isn't possible, all options can still be manually configured.
 
-To generate the initial authentication token simply start the addon, wait 5-10 seconds for it to initialize, then click "Open Web UI" to bring up the built in web-based authentication wizard and simply follow the instructions to enter your Ring username/password and then the 2FA code sent via email/text.  Once the authentication process has been completed the add-on will retrieve a token, save it to the filesystem, and attempt to start the connection to the Ring API servers.  Refresh tokens are only valid for a limited time (typically a few hours to a few days) so, going forward, the addon will acquire new refresh tokens automatically and save them to the state file to use during future startups.  The refresh token will not be displayed in the UI and the refresh_token field can remain blank in the addon configuration UI.
+To generate the initial authentication token simply start the addon, give the system 5-10 seconds to initialize, then click the button to open the web UI and follow the instructions in the wizard to enter your Ring username/password and then the 2FA code sent via email/text.  Once you enter your access information the add-on will retrieve a token, save it to the filesystem, and attempt to start the connection to the Ring servers.  Refresh tokens are only valid for a limited time (typically a few hours to a few days) so, going forward, the addon will refresh and save new tokens to the state file.  The refresh token will not be displayed in the UI and the refresh_token field can remain blank in the addon configuration UI.
 
 The add-on will ***ALWAYS*** attempt to connect with the most recently stored refresh token first.  If, for some reason, this refresh token doesn't work (changed password on account, which expires the token immediately, or the addon was offline for more than the token expire time, etc.) simply use the web UI to generate a new token.  If you prefer to generate the refresh token via external means (via CLI or some other method) this is possible, simply generate the token via your preferred method and then paste the token into the "ring_token" option in the configuration.  On startup the add-on will try this token as a fallback if the saved token cannot be used or does not exist.
 
@@ -22,7 +22,6 @@ To configure this plugin please review the following options:
 | mqtt_user | Manually specify/override auto detected MQTT user |
 | mqtt_pass | Manually specify/override auto detected MQTT password |
 | branch | Default value "addon" runs code from local Docker image.  See [Branch Feature](#branch-feature) for details. |
-| debug | Select debug categories, default is "ring-*" (all ring-mqtt debug categories).  See [Debugging](#debuggging) for details. |
 | ring_token | Used only as fallback, should be blank for most cases, please use the Web UI to generate a token |
 | location_ids | Comma separated list of location Ids to limit devices.  Blank is all locations which the specified account has access to. |
 
@@ -34,8 +33,7 @@ When using the camera support for video streams the addon will run a local insta
 
 To export the RTSP port externally simply edit the port settings in the addon configuration tab.  By default the port is disabled and the internal RTSP server listens on TCP port 8554, but it can be exposed externally on the same port or via any other available TCP port.  Once exposed it is possible to connect to the videos streams using any media client that supports RTSP.
 
-### Additional Feature Details
-#### Snapshot Options
+## Snapshot Options
 This addon has the ability to send still image snapshots via MQTT.  These images will automatically display in many home automation platforms such as Home Assistant as a camera entity.  Please note that these are not live action as MQTT is limited in this regard, however, even these snapshots can be quite useful.  There are a few modes that can be enabled:
 
 | Mode | Description |
@@ -51,25 +49,15 @@ When interval mode is selected, snapshots of cameras with wired power supply are
 
 It is also possible to manually override the snapshot interval, with the minimum valid time between snapshots being 10 seconds.  To change the snapshot interval use the snapshot interval entity available on the device in Home Assistant.
 
-#### Arming Bypass
+## Arming Bypass
 By default, attempts to arm the alarm when any contact sensors are in faulted state will fail with an audible message from the base station that sensors require bypass. Arming will retry 5 times every 10 seconds giving time for doors/windows to be closed, however, if sensors still require bypass after this time, arming will fail.
 
 This addon exposes an Arming Bypass Mode switch which can by toggled to change this arming behavior. When this switch is "ON", arming commands will automatically bypass any faulted contact sensors or retrofit zones. This option always defaults to "OFF".  If you prefer the default state to be "ON" you can create an automation to toggle it in Home Assistant.
 
-#### Volume Control
+## Volume Control
 Ring shared users do not have access to control the Base Station volume (any user can control Keypad volume).  Because of this, to enable control of Base Station volume using this addon, the refresh token must be generated using the primary Ring account. During startup the addon will detect if the account can control the base station volume and only enables the volume control if it determines the account has access. This is a limitation of the Ring API as even the official Ring App does not offer volume control to shared users for teh Base Station.
 
 Volume controls are presented in Home Assistant as number entities on the devices.  You can change them via the Lovalace UI or via Home Assistant automations.
 
-#### Branch Feature
+## Branch Feature
 The branch feature is designed to make testing the latest code easier for addon users. If you want to test the latest code from the ring-mqtt Github project simply set the branch options to "latest" or "dev" and, during startup the addon will pull the latest code from the master or dev branch respectively.  To revert to stock code for the addon simply change the option back to "addon" in the config and restart.  Note that this setting is recommended for testing only as it requires an internet connection to start and the dev branch may not always be in a fully functional state.
-
-## Debugging
-The addon defaults to producing debug output using all ring-mqtt debug categories but you can reduce or increase debugging output, or even disable debug logging completely, using the debug configuraiton option.  The debug message categories and the corresponding output are described below:
-
-| Category | Description |
-| --- | --- |
-| ring-mqtt | Startup messages and MQTT topic/state messages only for simple text based entity topics |
-| ring-attr | MQTT topic/state message for JSON attribute topics |
-| ring-disc | Full MQTT Home Assistant discovery messages (for large environments can be quite wordy during startup) |
-| ring-rtsp | Messages from RTSP streaming server the video stream on-demand scripts |
