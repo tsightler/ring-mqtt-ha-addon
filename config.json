@@ -1,6 +1,6 @@
 {
   "name": "Ring-MQTT with Video Streaming",
-  "version": "4.8.4",
+  "version": "4.8.5",
   "slug": "ring_mqtt",
   "description": "Integrate Ring Devices into Home Assistant via MQTT and RTSP",
   "startup": "application",
@@ -38,6 +38,7 @@
     "mqtt_user": "<auto_detect>",
     "mqtt_password": "<auto_detect>",
     "branch": "addon",
+    "debug": "ring-*",
     "ring_token": "",
     "location_ids": [""]
   },
@@ -55,6 +56,7 @@
     "mqtt_user": "str",
     "mqtt_password": "password",
     "branch": "str",
+    "debug": "str",
     "ring_token": "password",
     "location_ids": ["str"]
   }
