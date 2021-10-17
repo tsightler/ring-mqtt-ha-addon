@@ -29,6 +29,9 @@ To configure this plugin please review the following options:
 ### Camera video streaming support
 Please read the detailed [camera documentation](https://github.com/tsightler/ring-mqtt/blob/main/docs/CAMERAS.md) for more information on configuring video streaming support.
 
+**!!!! Important note regarding camera support !!!!**    
+The ring-mqtt project does not magically turn Ring cameras into 24x7/continuous streaming CCTV cameras.  Ring cameras are designed to work with Ring cloud servers for on-demand streaming based on detected events (motion/ding) or interactive viewing.  Even when using ring-mqtt, all streaming still goes through Ring cloud servers and is not local.  Attempting to leverage this project for continuous streaming is not a supported use case and attempts to do so will almost certainly end in disappointment, this includes use with NVR tools like Frigate or motionEye.
+
 #### External RTSP Server Access
 When using the camera support for video streams the addon will run a local instance of rtsp-simple-server.  Since the addon runs on the same host as Home Assistant the Home Assistant instance can access this RTSP server directly via the internal Docker network, however, if you want to access the stream from other host on the network you can expose the RTSP port as well. Note that, if you choose to expose the port, it is HIGHLY recommended to set a live stream user and password using the appropriate configuration options.  Also, the RTSP streams do not currenty support encryption, so direct access to the stream is not recommened over any untrusted network with a VPN.
 
