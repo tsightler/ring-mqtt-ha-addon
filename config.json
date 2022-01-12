@@ -1,6 +1,6 @@
 {
   "name": "Ring-MQTT with Video Streaming",
-  "version": "4.8.5",
+  "version": "4.9.0",
   "slug": "ring_mqtt",
   "description": "Integrate Ring Devices into Home Assistant via MQTT and RTSP",
   "startup": "application",
