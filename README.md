@@ -4,6 +4,7 @@
 ![amd64-shield](https://img.shields.io/badge/amd64-yes-green.svg)
 ![armhf-shield](https://img.shields.io/badge/armhf-yes-green.svg)
 ![armv7-shield](https://img.shields.io/badge/armv7-yes-green.svg)
+
 # About
 This Home Assistant add-on uses the [ring-mqtt](https://github.com/tsightler/ring-mqtt) script to integrate alarm, smart lighting and camera devices sold by Ring LLC into Home Assistant via the MQTT protocol. Currently, most official Ring alarm devices, as well as many 3rd party Z-wave devices that can be connected to the Ring Alarm hub, are supported.  Support for camera and chime devices is disabled by default since these devices are already supported via the native Home Assistant Ring component, but is enabled if using the integration from this addon is preferred.
 
