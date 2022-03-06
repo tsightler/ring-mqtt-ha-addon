@@ -24,7 +24,7 @@
     "8554/tcp": "RTSP Server External Port (IMPORTANT: Configure livestream username/password before enabling!)"
   },
   "init": false,
-  "privileged": ["NET_ADMIN"],
+  "privileged": ["NET_ADMIN", "SYS_ADMIN"],
   "options": {
     "enable_cameras": false,
     "snapshot_mode": "disabled",
