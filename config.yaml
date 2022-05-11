@@ -1,0 +1,49 @@
+name: Ring-MQTT with Video Streaming
+version: 5.0.0
+slug: ring_mqtt
+description: Integrate Ring Devices into Home Assistant via MQTT and RTSP
+startup: application
+boot: auto
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+url: 'https://github.com/tsightler/ring-mqtt-ha-addon'
+image: tsightler/ring-mqtt
+webui: 'http://[HOST]:[PORT:55123]/'
+ingress: true
+ingress_port: 55123
+services:
+  - 'mqtt:need'
+ports:
+  8554/tcp: null
+ports_description:
+  8554/tcp: 'RTSP Server External Port (IMPORTANT: Configure livestream username/password before enabling!)''
+init: false
+options:
+  mqtt_url: 'mqtt://auto_username:auto_password@auto_hostname'
+  mqtt_options: ''
+  livestream_user: ''
+  livestream_pass: ''
+  disarm_code: ''
+  enable_cameras: true
+  enable_modes: false
+  enable_panic: false
+  branch: addon
+  debug: ring-*
+  location_ids:
+    - ''
+schema:
+  mqtt_url: url
+  mqtt_options: str
+  livestream_user: str
+  livestream_pass: password
+  disarm_code: password
+  enable_cameras: bool
+  enable_modes: bool
+  enable_panic: bool
+  branch: str
+  debug: str
+  location_ids:
+    - str
