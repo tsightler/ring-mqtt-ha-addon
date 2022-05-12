@@ -1,5 +1,5 @@
 name: Ring-MQTT with Video Streaming
-version: 5.0.0
+version: 5.0.1
 slug: ring_mqtt
 description: Integrate Ring Devices into Home Assistant via MQTT and RTSP
 startup: application
@@ -10,7 +10,7 @@ arch:
   - armhf
   - armv7
 url: 'https://github.com/tsightler/ring-mqtt-ha-addon'
-image: tsightler/ring-mqtt
+image: 'tsightler/ring-mqtt'
 webui: 'http://[HOST]:[PORT:55123]/'
 ingress: true
 ingress_port: 55123
