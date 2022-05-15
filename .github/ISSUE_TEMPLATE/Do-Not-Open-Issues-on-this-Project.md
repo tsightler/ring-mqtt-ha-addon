@@ -1,6 +1,6 @@
 ---
-name: Open New Issue
-about: Submit an new issue with the addon
+name: Do *NOT* Open Issues on this Project
+about: Submit issues in main ring-mqtt project
 title: "<---Please enter an brief summary of the issue--->"
 labels: issue
 assignees: tsightler
