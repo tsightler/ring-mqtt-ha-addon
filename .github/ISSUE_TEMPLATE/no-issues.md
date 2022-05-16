@@ -1,7 +1,7 @@
 ---
 name: Open issues on main ring-mqtt project page, *not* here!
-about: Submit issues to the main ring-mqtt project page at https://github.com/tsightler/ring-mqtt
-title: "!!!! Issues opened on this project will be closed with no response !!!!"
+about: Submit any issues via ring-mqtt project page at https://github.com/tsightler/ring-mqtt
+title: "!!!! Issues opened on this project page will be closed with no response !!!!"
 labels: issue
 assignees: tsightler
 
