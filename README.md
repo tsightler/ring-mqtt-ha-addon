@@ -8,7 +8,8 @@
 # About
 This add-on provides users of Home Assistant OS or Home Assistant Supervised an easy method to install the [ring-mqtt](https://github.com/tsightler/ring-mqtt) allowing Home Assistant to easily integrate with alarm, smart lighting and camera devices sold by Ring LLC via the Home Assistants MQTT device support.  The project also supports video streaming by providing an RTSP gateway service that allows any media client supporting the RTSP protocol to connect to a Ring camera livestream or to play back recorded events (Ring Protect subscription required for event recording playback).  Please review the full list of [supported devices and features](https://github.com/tsightler/ring-mqtt/wiki#supported-devices-and-features) for more information on current capabilities.
 
-For support questions, please use the [discussions section](https://github.com/tsightler/ring-mqtt/discussions) on the main [ring-mqtt project](https://github.com/tsightler/ring-mqtt).
+## Support
+If you need help with this addon please use the [discussions section](https://github.com/tsightler/ring-mqtt/discussions) on the main [ring-mqtt project](https://github.com/tsightler/ring-mqtt).
 
 ## Quick Install
 This is a Home Assistant addon and must be added to the native Home Assistant add-on store, this project has nothing to do with HACS and attempts to add this repository to HACS will fail.  The Home Assistant add-on store is only available when running Home Assistant Supervised installed via either Home Assistant OS or manually.  If you are running Home Assistant Core via Docker or manual install into a Python virtual environment then there is no support for the addon store but you can still run the [ring-mqtt](https://github.com/tsightler/ring-mqtt) project directly to get the same capabilities.
