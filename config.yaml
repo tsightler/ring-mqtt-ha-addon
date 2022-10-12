@@ -1,5 +1,5 @@
 name: Ring-MQTT with Video Streaming
-version: 5.0.3
+version: 5.0.4
 slug: ring_mqtt
 description: Integrate Ring Devices into Home Assistant via MQTT and RTSP
 startup: application
@@ -16,6 +16,9 @@ ingress: true
 ingress_port: 55123
 services:
   - 'mqtt:need'
+map:
+  - ssl
+watchdog: 'http://[HOST]:[PORT:55123]/'
 ports:
   8554/tcp: null
 ports_description:
