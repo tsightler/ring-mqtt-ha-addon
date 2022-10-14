@@ -4,7 +4,7 @@ Please refer to the [ring-mqtt project wiki](https://github.com/tsightler/ring-m
 ## Global Configuration Options
 | Config Option | Description | Default |
 | --- | --- | --- |
-| mqtt_url | URL for connecting to MQTT server.  Example with TLS encryption and username/password authentication: mqtts://user:password@my-mqtt-host:8883 | mqtt://auto_username:auto_password@auto_hostname:1883 |
+| mqtt_url | URL for connecting to MQTT broker in standard MQTT URL format: `mqtt(s)://[username[:password]@]host[:port]`.  Addon users leveraging the default Home Assistant Mosquitto integration should not need to change this value as connection details are discovered via the MQTT Service API, manually setting this will override this automatic discovery.  Special characters must be entered using [percent encoding format](https://developer.mozilla.org/en-US/docs/Glossary/percent-encoding). | mqtt://auto_username:auto_password@auto_hostname:1883 |
 | mqtt_options | Comma separated list of options that will be passed to MQTT.js client library.  Mostly useful for self-signed certificates or client side certificate authentication. See [MQTT Advanced Options](https://github.com/tsightler/ring-mqtt/wiki/MQTT-Advanced-Options) for more details. | blank |
 | livestream_user | Specify a password for RTSP connections.  Highly recommended if the RTSP port for external media player access is enabled.  The livestream_password option must also be defined or this option is ignored. | blank |
 | livestream_pass | Specify a password for RTSP connections.  Highly recommended if the RTSP port for external media player access is enabled.  The livestream_user option must also be defined or this option is ignored. | blank |
