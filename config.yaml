@@ -24,6 +24,7 @@ ports:
 ports_description:
   8554/tcp: 'RTSP Server External Port (IMPORTANT: Configure livestream username/password before enabling!)'
 init: false
+video: true
 options:
   mqtt_url: 'mqtt://auto_username:auto_password@auto_hostname'
   mqtt_options: ''
