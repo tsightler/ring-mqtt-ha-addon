@@ -38,7 +38,6 @@ options:
   branch: addon
   debug: ring-*
   location_ids: []
-    - ''
 schema:
   mqtt_url: url
   mqtt_options: str
