@@ -17,6 +17,7 @@ ingress_port: 55123
 services:
   - 'mqtt:need'
 map:
+  - config
   - ssl
 watchdog: 'http://[HOST]:[PORT:55123]/'
 ports:
@@ -36,7 +37,7 @@ options:
   enable_panic: false
   branch: addon
   debug: ring-*
-  location_ids:
+  location_ids: []
     - ''
 schema:
   mqtt_url: url
@@ -49,5 +50,4 @@ schema:
   enable_panic: bool
   branch: str
   debug: str
-  location_ids:
-    - str
+  location_ids: [str]
