@@ -27,7 +27,7 @@ ports_description:
   8554/tcp: 'RTSP Server External Port (IMPORTANT: Configure livestream username/password before enabling!)'
   8555/tcp: 'TCP Port for WebRTC streams'
 init: false
-video: true
+hassio_api: true
 options:
   mqtt_url: 'mqtt://auto_username:auto_password@auto_hostname'
   mqtt_options: ''
