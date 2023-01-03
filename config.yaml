@@ -51,4 +51,5 @@ schema:
   enable_panic: bool
   branch: str
   debug: str
-  location_ids: [str]
+  location_ids: 
+    - "str"
