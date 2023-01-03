@@ -39,8 +39,7 @@ options:
   enable_panic: false
   branch: addon
   debug: ring-*
-  location_ids:
-    - ''
+  location_ids: []
 schema:
   mqtt_url: url
   mqtt_options: str
@@ -53,4 +52,4 @@ schema:
   branch: str
   debug: str
   location_ids: 
-    - 'str'
+    - str
