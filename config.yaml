@@ -25,7 +25,7 @@ ports:
   8555/tcp: null
 ports_description:
   8554/tcp: 'RTSP Server External Port (IMPORTANT: Configure livestream username/password before enabling!)'
-  8555/tcp: 'TCP Port for WebRTC streams'
+  8555/tcp: 'Go2RTC port for WebRTC (required only if using Home RTSPtoWebRTC Home Assistant integration)'
 init: false
 hassio_api: true
 video: true
