@@ -28,6 +28,7 @@ ports_description:
   8555/tcp: 'TCP Port for WebRTC streams'
 init: false
 hassio_api: true
+video: true
 options:
   mqtt_url: 'mqtt://auto_username:auto_password@auto_hostname'
   mqtt_options: ''
