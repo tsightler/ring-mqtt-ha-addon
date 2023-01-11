@@ -17,17 +17,13 @@ ingress_port: 55123
 services:
   - 'mqtt:need'
 map:
-  - config
   - ssl
 watchdog: 'http://[HOST]:[PORT:55123]/'
 ports:
   8554/tcp: null
-  8555/tcp: 8555
 ports_description:
   8554/tcp: 'RTSP Server External Port (IMPORTANT: Configure livestream username/password before enabling!)'
-  8555/tcp: 'Go2RTC port for WebRTC (required only if using Home RTSPtoWebRTC Home Assistant integration)'
 init: false
-hassio_api: true
 video: true
 options:
   mqtt_url: 'mqtt://auto_username:auto_password@auto_hostname'
