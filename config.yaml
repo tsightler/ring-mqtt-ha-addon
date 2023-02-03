@@ -24,6 +24,7 @@ ports:
 ports_description:
   8554/tcp: 'RTSP Server External Port (IMPORTANT: Configure livestream username/password before enabling!)'
 init: false
+video: true
 options:
   mqtt_url: 'mqtt://auto_username:auto_password@auto_hostname'
   mqtt_options: ''
@@ -35,8 +36,7 @@ options:
   enable_panic: false
   branch: addon
   debug: ring-*
-  location_ids:
-    - ''
+  location_ids: []
 schema:
   mqtt_url: url
   mqtt_options: str
@@ -48,5 +48,5 @@ schema:
   enable_panic: bool
   branch: str
   debug: str
-  location_ids:
+  location_ids: 
     - str
