@@ -22,7 +22,7 @@ watchdog: 'http://[HOST]:[PORT:55123]/'
 ports:
   8554/tcp: null
 ports_description:
-  8554/tcp: 'RTSP Server External Port (IMPORTANT: Only needed if you want to view streams outside of Home Assistant, configure livestream username/password before enabling!)'
+  8554/tcp: 'RTSP Server External Port (IMPORTANT: Only needed if you want to use RTSP client outside of Home Assistant, configure livestream username/password before enabling!)'
 init: false
 video: true
 options:
