@@ -1,6 +1,6 @@
 ### Gathering logs in Home Assistant OS
 
-When submitting a bug report one item of critical importance is gathering proper, full logs.  While Home Assistant OS does show addon logs in the web interface it is only the most recent lines and sometimes misses critical errors that are useful for troubleshooting issues, especially if those error cause the script to exit.  The steps below can be used to gather a full set of logs from the startup of the docker container to shutdown:
+When submitting a bug report one item of critical importance is gathering proper, full logs.  While Home Assistant OS does show addon logs in the web interface it is only the most recent lines and misses critical information, such as the data logged at startup, that is useful for understanding the overall environment.  The steps below can be used to gather a full set of logs from the startup of the docker container to shutdown:
 
 1) Install the excellent [SSH & Web Terminal](https://github.com/hassio-addons/addon-ssh) addon (available in the Community addons section - search "Web Terminal") 
 2) Configure the addon with an SSH password (strong password) or public key
