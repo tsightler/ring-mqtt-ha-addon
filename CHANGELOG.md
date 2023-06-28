@@ -1,3 +1,7 @@
+## v5.4.1
+**Bugs Fixed**
+- Fix alarm state not updating for various conditions (armed/disarmed with keypad, exit-delay, etc)
+
 ## v5.4.0
 This release is mostly to get back to stable ring-client-api version with final fixes for camera notification issues, however, managed to sneak in one highly requested feature and a few minor improvements as well.
 
