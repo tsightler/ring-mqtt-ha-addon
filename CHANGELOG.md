@@ -1,3 +1,9 @@
+## v5.9.0
+This is mostly a depedency update after a long while without any updates, but I bumped the minor version as this should also enable experimental support for the following new devices:
+
+ - The Ring Video Intercom should now be detected, however, functionality is limited to the same features supported with prior non-Video version (i.e. no video features)
+ - The Kiddie Smoke/CO devices should be detected, however, this is the first supported non-Zwave alarm device and I have no idea if state updates will actually work as I do not have this hardware to test.  Success or failure reports are highly appreciated.
+
 ## v5.8.1
 **Bugs Fixed**
 Update ring-client-api to address a recent Ring API change which caused socket connections to fail and crash the ring-mqtt process.
