@@ -1,3 +1,9 @@
+## v5.9.2
+This update attempts to workaround an issue causing MQTT automatic discovery to fail randomly in a small number of cases.  As far as I can tell, this is an upstream issue as the API is reporting the MQTT service unavailable even though the Mosquitto addon is running and HA is connected.  The new code simply checks that the MQTT service exist and uses the crednetials in any case, ignoring the reported service status.  I have no idea if this will fix the reported issue as this code hasn't been touched in ages and I can't reproduce the issue, but I saw some other addons that made similar changes in recent months, so I thought it was worth a shot.
+
+**Dependency Updates**
+ - Go2RTC 1.9.12 (revert to upstream version as exec hang issues appear to be fixed now)
+
 ## v5.9.1
 **Bugs Fixed**
 Fix an issue introduced with new Express server that kept web authenticator UI from starting.
