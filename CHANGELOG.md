@@ -1,3 +1,18 @@
+**Bugs Fixed**
+ - Updated ring-client-api with patched push-receiver package to address push messages failing decryption with ERR_CRYPTO_ECDH_INVALID_PUBLIC_KEY message, potentially leading to missed motion/ding events for cameras/doorbells/intercoms.
+ - Fix crash due to unexpected security panel when users only have a Sidewalk based Ring device such as Kiddie Smoke/CO detector
+ - Fix Kiddie Smoke/CO states not properly updated during smoke/co detection events (testing welcome)
+ - Implement minor changes to attempt to address sporadic authentication issues reported by a small number of users
+
+**Dependency Updates**
+ - aedes 1.0.0
+ - body-parser 2.2.2
+ - mqtt 5.15.0
+ - ring-client-api 14.3.1-beta.0 (custom)
+ - werift 0.22.9
+ - write-file-atomic 7.0.1
+ - Go2RTC 1.9.14
+ 
 ## v5.9.2
 This update attempts to workaround an issue causing MQTT automatic discovery to fail randomly in a small number of cases.  As far as I can tell, this is an upstream issue as the API is reporting the MQTT service unavailable even though the Mosquitto addon is running and HA is connected.  The new code simply checks that the MQTT service exist and uses the crednetials in any case, ignoring the reported service status.  I have no idea if this will fix the reported issue as this code hasn't been touched in ages and I can't reproduce the issue, but I saw some other addons that made similar changes in recent months, so I thought it was worth a shot.
 
