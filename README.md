@@ -24,7 +24,7 @@ To install this addon follow these steps:
 1) Navigate to the add-on store in the Home Assistant UI (**Supervisor** in the left menu, then **Add-on Store** on the top tab)
 2) Select the three vertical dots in the upper right-hand corner and select repositories
 3) In the **Manage add-on repositories** screen enter the URL for this projects Github page (https://github.com/tsightler/ring-mqtt-ha-addon) and click add
-4) After adding the repository scroll to the bottom of the list of addons or use seach to find the addon
+4) After adding the repository scroll to the bottom of the list of addons or use search to find the addon
 5) Select the addon and click the **Install**
 6) Proceed to the [configuration documentation](DOCS.md)
 
