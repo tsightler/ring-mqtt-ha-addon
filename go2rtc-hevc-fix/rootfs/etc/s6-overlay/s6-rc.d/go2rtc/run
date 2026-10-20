@@ -1,0 +1,13 @@
+#!/command/with-contenv bashio
+# Mirror the official go2rtc add-on: go2rtc owns /config/go2rtc.yaml and Home
+# Assistant writes stream entries into it through the API. Seed an empty file on
+# first run so go2rtc has somewhere to persist them; an empty config means go2rtc
+# uses its built-in listener defaults.
+mkdir -p /config
+if ! bashio::fs.file_exists /config/go2rtc.yaml; then
+    echo "# Managed by go2rtc and Home Assistant." > /config/go2rtc.yaml
+    bashio::log.info "Seeded an empty /config/go2rtc.yaml"
+fi
+
+bashio::log.info "Starting patched go2rtc (go2rtc-hevc-fix)..."
+exec go2rtc -config /config/go2rtc.yaml

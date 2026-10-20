@@ -1,0 +1,25 @@
+name: go2rtc-hevc-fix
+description: >-
+  A drop-in replacement for the official go2rtc add-on that de-aggregates
+  RFC 7798 HEVC packets, so HEVC cameras served through an ffmpeg-wrapped RTSP
+  source play instead of freezing. Temporary until upstream PR #2296 is released.
+version: 1.9.14-hevcfix.1
+slug: go2rtc_hevc_fix
+url: https://github.com/tsightler/ring-mqtt-ha-addon/tree/main/go2rtc-hevc-fix
+arch:
+  - amd64
+  - aarch64
+  - armv7
+init: false
+startup: system
+host_network: true
+homeassistant_api: true
+video: true
+audio: true
+ingress: true
+ingress_port: 1984
+panel_icon: mdi:camera-wireless
+map:
+  - config:rw
+  - media
+  - ssl

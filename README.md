@@ -1,28 +1,29 @@
-![ring-mqtt-logo](https://raw.githubusercontent.com/tsightler/ring-mqtt-ha-addon/master/logo.png)
+# Ring-MQTT Home Assistant Add-on Repository
 
-![aarch64-shield](https://img.shields.io/badge/aarch64-yes-green.svg)
-![amd64-shield](https://img.shields.io/badge/amd64-yes-green.svg)
-![armhf-shield](https://img.shields.io/badge/armhf-yes-green.svg)
-![armv7-shield](https://img.shields.io/badge/armv7-yes-green.svg)
+A Home Assistant add-on repository containing:
 
-# About
-This add-on provides users of Home Assistant OS or Home Assistant Supervised an easy method to install and run the [ring-mqtt](https://github.com/tsightler/ring-mqtt) project which allows various devices sold by Ring LLC to integrate easily with Home Assistant via the open MQTT protocol.  The project also supports video streaming by providing an RTSP gateway service that allows any media client supporting the RTSP protocol to connect to a Ring camera livestream or to play back recorded events (Ring Protect subscription required for event recording playback).  Please review the full list of [supported devices and features](https://github.com/tsightler/ring-mqtt/wiki#supported-devices-and-features) for more information on current capabilities.
+## [Ring-MQTT with Video Streaming](ring-mqtt/)
 
-## Support
-If you need help with this addon please use the [discussions section](https://github.com/tsightler/ring-mqtt/discussions) on the main [ring-mqtt project](https://github.com/tsightler/ring-mqtt).
+Integrate Ring devices into Home Assistant via MQTT, with live and recorded
+video served over RTSP. This is the main add-on — see
+[ring-mqtt/DOCS.md](ring-mqtt/DOCS.md).
 
-## Quick Install
-This is a Home Assistant addon and must be added to the native Home Assistant add-on store, this project has nothing to do with HACS and attempts to add this repository to HACS will fail.  The Home Assistant add-on store is only available when running Home Assistant Supervised installed via either Home Assistant OS or manually.  If you are running Home Assistant Core via Docker or manual install into a Python virtual environment then there is no support for the addon store but you can still run the [ring-mqtt](https://github.com/tsightler/ring-mqtt) project directly to get the same capabilities.
+## [go2rtc-hevc-fix](go2rtc-hevc-fix/)
 
-**This add-on requires a working MQTT broker.  Configuring Home Assistant MQTT support is outside of the scope of this document but the standard Home Assistant Mosquitto integration along with the Mosquitto MQTT add-on is the recommended configuration.**
+A drop-in replacement for the official go2rtc add-on that adds a single fix:
+HEVC RTP aggregation-packet handling (upstream go2rtc
+[PR #2296](https://github.com/AlexxIT/go2rtc/pull/2296)). Without it, HEVC
+cameras whose RTSP source is wrapped in ffmpeg — including Ring cameras served
+through the add-on above — freeze after a second or two or show a green screen in
+Home Assistant. It is temporary, until the fix ships in a go2rtc release. See
+[go2rtc-hevc-fix/DOCS.md](go2rtc-hevc-fix/DOCS.md).
 
-To install this addon follow these steps:
+## Installing
 
-1) Navigate to the add-on store in the Home Assistant UI (**Supervisor** in the left menu, then **Add-on Store** on the top tab)
-2) Select the three vertical dots in the upper right-hand corner and select repositories
-3) In the **Manage add-on repositories** screen enter the URL for this projects Github page (https://github.com/tsightler/ring-mqtt-ha-addon) and click add
-4) After adding the repository scroll to the bottom of the list of addons or use seach to find the addon
-5) Select the addon and click the **Install**
-6) Proceed to the [configuration documentation](DOCS.md)
+In Home Assistant: **Settings → Add-ons → Add-on Store → ⋮ → Repositories**, add
 
-Please refer to the [ring-mqtt project wiki](https://github.com/tsightler/ring-mqtt/wiki) for complete documentation on the various features and configuration options.
+```
+https://github.com/tsightler/ring-mqtt-ha-addon
+```
+
+then install either add-on from the store.

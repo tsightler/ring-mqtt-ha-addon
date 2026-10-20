@@ -1,0 +1,8 @@
+build_from:
+  amd64: ghcr.io/home-assistant/amd64-base:latest
+  aarch64: ghcr.io/home-assistant/aarch64-base:latest
+  armv7: ghcr.io/home-assistant/armv7-base:latest
+labels:
+  org.opencontainers.image.title: go2rtc-hevc-fix
+  org.opencontainers.image.description: go2rtc with the HEVC aggregation-packet fix
+  org.opencontainers.image.source: https://github.com/tsightler/ring-mqtt-ha-addon
