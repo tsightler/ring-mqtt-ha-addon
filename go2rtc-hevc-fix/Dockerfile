@@ -5,8 +5,8 @@
 # against.
 ARG BUILD_FROM
 
-FROM golang:1.25-alpine AS build
-ARG GO2RTC_VERSION=1.9.14
+FROM golang:1.27-alpine AS build
+ARG GO2RTC_VERSION=1.9.15
 RUN apk add --no-cache git
 WORKDIR /src
 RUN git -c advice.detachedHead=false clone --depth 1 \

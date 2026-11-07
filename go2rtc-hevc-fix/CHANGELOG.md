@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.15-hevcfix.1
+
+- Update to go2rtc 1.9.15 with upstream PR #2296 applied.
+
 ## 1.9.14-hevcfix.1
 
 - Initial release. go2rtc 1.9.14 built from source with upstream PR #2296
