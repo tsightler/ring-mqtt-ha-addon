@@ -42,7 +42,7 @@ schema:
   mqtt_options: str
   livestream_user: str
   livestream_pass: password
-  disarm_code: password
+  disarm_code: str
   enable_cameras: bool
   enable_modes: bool
   enable_panic: bool
